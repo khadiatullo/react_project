@@ -20,7 +20,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ isAuth, setIsAuth, isLoading}}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div id='root'>
           <Navbar />
           <AppRouter />
